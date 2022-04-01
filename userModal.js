@@ -51,10 +51,10 @@ export default {
           </div>
      `,
   mounted() {
-    this.myModal = new bootstrap.Modal(document.getElementById('productModal', {
+    this.myModal = new bootstrap.Modal(document.getElementById('productModal'), {
       keyboard: false,
       backdrop: 'static'
-    }));
+    });
 
 
 
@@ -62,11 +62,11 @@ export default {
   methods: {
     openModal() {
       this.myModal.show();
-
+      this.qty = 1;
     },
     closeModal() {
       this.myModal.hide();
-      this.qty = 1;
+      
     }
   },
 
